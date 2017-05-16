@@ -3,8 +3,10 @@ FROM php:5.6
 
 #ENV APACHE_CONFDIR /etc/apache2
 
+RUN apt-get update && apt-get install git
+
 # For install Zend framework setting.
-#RUN apt-get update && apt-get install -y \
+#RUN apt-get install -y \
 #    zip \
 #    unzip
 
