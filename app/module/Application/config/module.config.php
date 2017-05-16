@@ -13,11 +13,12 @@ return array(
     'router' => array(
         'routes' => array(
             'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Zend\Mvc\Router\Http\Segment',
                 'options' => array(
-                    'route'    => '/',
+                    'route'    => '/[:controller[/:action]]',
                     'defaults' => array(
-                        'controller' => 'Application\Controller\Index',
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller' => 'Index',
                         'action'     => 'index',
                     ),
                 ),
